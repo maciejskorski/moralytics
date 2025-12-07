@@ -1,17 +1,5 @@
-<svg width="240" height="60" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <style>
-      .logo-text {
-        font-family: 'Latin Modern Sans', 'Computer Modern Sans', sans-serif;
-        font-size: 42px;
-        font-weight: 400;
-      }
-    </style>
-  </defs>
-  <text x="0" y="45" class="logo-text">
-    <tspan fill="#23547b">mora</tspan>
-    <tspan fill="#AD0000">l</tspan>
-    <tspan fill="#23547b">ytics</tspan>
+<svg width="220" height="50" xmlns="http://www.w3.org/2000/svg">
+  <text x="0" y="35" font-family="sans-serif" font-size="36">
+    <tspan fill="#23547b">mora</tspan><tspan fill="#AD0000">l</tspan><tspan fill="#23547b">ytics</tspan><tspan fill="#AD0000" dy="-3">_</tspan>
   </text>
-  <rect x="210" y="38" width="12" height="3" fill="#AD0000"/>
 </svg>

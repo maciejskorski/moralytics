@@ -85,11 +85,12 @@
         var profiles = [
             { label: "Brand comms",    data: [38, 72, 18, 55, 22], color: "#00B4A6", desc: "Warm and inclusive — Care and Fairness dominate, Authority stays low." },
             { label: "Company policy", data: [75, 48, 65, 30, 52], color: "#6A4C93", desc: "Hierarchy and compliance — Authority and Loyalty lead." },
-            { label: "Social discourse",data: [68, 62, 72, 70, 45], color: "#23547b", desc: "Dense moral mixture — all foundations activated, often in tension." },
+            { label: "Political speech", data: [80, 35, 75, 30, 72], color: "#23547b", desc: "Conservative political rhetoric clusters Authority, Loyalty, and Sanctity — the binding foundations that hold groups together." },
             { label: "Crisis message", data: [88, 60, 78, 40, 65], color: "#E74C3C", desc: "Care and Loyalty surge — protect people, rally together." },
             { label: "ESG report",     data: [58, 80, 20, 72, 38], color: "#3498DB", desc: "Fairness and Sanctity (stewardship) front and centre." }
         ];
-        var foundations = ["Authority","Care","Loyalty","Fairness","Sanctity"];
+        var foundations = ["👑 Authority","🤲 Care","🛡️ Loyalty","⚖️ Fairness","🕊️ Sanctity"];
+        var foundationNames = ["Authority","Care","Loyalty","Fairness","Sanctity"];
         var active = 0;
         var btnsEl = document.getElementById('ctx-btns');
         var sidebar = document.getElementById('mf-sidebar');
@@ -133,7 +134,7 @@
                     ticks: { display: false, stepSize: 25 },
                     grid: { color: 'rgba(0,0,0,0.08)', lineWidth: 0.5 },
                     angleLines: { color: 'rgba(0,0,0,0.08)', lineWidth: 0.5 },
-                    pointLabels: { font: { size: 11 }, color: '#34495E' }
+                    pointLabels: { font: { size: 13 }, color: '#34495E' }
                 }}
             }
         });
@@ -145,7 +146,7 @@
 
         function updateSidebar() {
             var p = profiles[active];
-            var sorted = foundations.map(function(f,i){ return {f:f, v:p.data[i]}; }).sort(function(a,b){ return b.v-a.v; });
+            var sorted = foundationNames.map(function(f,i){ return {f:f, v:p.data[i]}; }).sort(function(a,b){ return b.v-a.v; });
             sidebar.innerHTML = '<p style="font-size:11px;color:#888;line-height:1.5;margin-bottom:10px;">'+p.desc+'</p>'
                 + '<div style="display:flex;flex-direction:column;gap:7px;">'
                 + sorted.map(function(d){ return '<div>'
